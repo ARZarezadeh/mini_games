@@ -3,20 +3,17 @@ class Board:
         self.matrix = [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
 
     def show_empty_board(self):
-        board = "\n"
-        for i in range(3):
-            board += "⬜️"*3
-            board += "\n"
+        board = ('⬜️' * 3 + '\n') * 3
 
         print(board)
 
-    def show_the_board(self, X_cells, O_cells):
+    def show_the_board(self, x_cells, o_cells):
         board = '\n'
         for i in [1, 2, 3]:
             for j in [1, 2, 3]:
-                if [i, j] in X_cells:
+                if [i, j] in x_cells:
                     board += '❎'
-                elif [i, j] in O_cells:
+                elif [i, j] in o_cells:
                     board += '🅾️ '
                 else:
                     board += '⬜️'
